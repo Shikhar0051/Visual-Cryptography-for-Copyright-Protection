@@ -6,10 +6,10 @@ Visual Cryptography may be a special encryption technique to cover information i
 There is a simple algorithm for visual cryptography that creates 2 encrypted images from an original unencrypted image. The algorithm is as follows:
 1. Create an image of random pixels the same size and shape as the original image. Random1.
 2. Create a second image whose pixels are the exclusiveor (XOR) of the first image and the original image.<br>
-       &nbsp;&nbsp;&nbsp; Random2 = Random1 XOR Original.
+       Random2 = Random1 XOR Original.
 <br>This image will "look random".
 3. The two apparently random images can now be combined with XOR to re-create the original image.<br>
-       &nbsp;&nbsp;&nbsp; Random1 XOR Random2 = Original
+       Random1 XOR Random2 = Original
       
 ## How to run
 There is no special requirements for this project. The flow of the project will be as given below:
@@ -17,3 +17,5 @@ There is no special requirements for this project. The flow of the project will 
 2. 'python master_share_generator.py' will generate all the Master shares for each of the sample stolen and modified images.
 3. 'python watermark_generator.py' will extract watermarks using the Ownership share with each of the master shares.
 4. 'python template_match_res.py' will give the accuracy of extracted watermark.
+
+<br> The results will be saved im the images folder.
